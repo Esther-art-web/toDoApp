@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>To Do Application</title>
+</head>
+<body>
+    <div class="screen">
+        <main class="container">
+            <div class="top-bar">
+                <img src='./images/clipboard-icon.png' class="note icon" alt="..."/>
+                <h1>TO DO</h1>
+                <img src='./images/download-icon.png' class="download icon" src='...'/>
+            </div>
+            <div class="content">
+                <div class="item-list">
+                    <div class="task">
+                        <img src="./images/pending-icon.jpg" alt="pending" class="task-content icon">
+                        <div class="task-content text">
+                            <p class="title">Task Title</p>
+                            <p class="description">Task Description</p>
+                        </div>
+                        <img src="./images/check-icon.png" alt='...' class="task-content icon">
+                        <img src="./images/delete-icon.png" alt="..." class="task-content icon">
+                    </div>
+                    <div class="task">
+                        <img src="./images/done-icon.png" alt="..." class="task-content icon">
+                        <div class="task-content text">
+                            <p class="title">Task Title</p>
+                            <p class="description">Task Description</p>
+                        </div>
+                        
+                        <img src="./images/delete-icon.png" alt="delete" class="task-content icon">
+                    </div>
+                    
+                </div>
+                <form>
+                    <img  class='add icon' src="./images/add-icon.svg" alt="..."/>
+                    <input type="text" placeholder="Task Title" minlength="2"/>
+                    <input type="text" placeholder="Task Description" minlength="6"/>
+                    <input type="submit" value="Add"/>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

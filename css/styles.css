@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Roboto';
+}
+.top-bar{
+    position: relative;
+    background-color: blue;
+    width: 700px;
+    height: 100px;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 15px 50px;
+    z-index: 1001;
+
+}
+h1{
+    float: left;
+    margin: 20px 230px;
+   
+}
+.icon{
+    float: left;
+    background-color: white;
+    margin-top: 10px;
+    width: 50px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.item-list{
+    height: 50vh;
+    padding: 0px 0px 0px;
+    overflow-y: auto;
+   
+}
+
+.content{
+    z-index: 0;
+    position: relative;
+    /* padding: 5px; */
+    width: 700px;
+    height: 70vh;
+    margin: -70px auto;
+    border: 1px solid rgba(0,0,0, 0.5);
+    border-radius: 20px;
+}
+.task{
+    padding: 0 10px;
+    clear: both;
+    height: 80px;
+    position: relative;
+    border: 2px solid rgba(0,0,0,0.5);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    
+}
+.item-list:nth-child(1){
+    border-top: 2px solid rgba(0,0,0,0.5);
+    margin: 50px 0px 0px;
+}
+.task-content{
+    float: left;
+}
+form{
+    padding: 5px 10px;
+    border-top: 1px solid rgba(0,0,0,0.5);
+}
+input{
+    height: 30px;
+    margin: 20px 10px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+input[type='submit']{
+    width: 60px;
+    
+}
+.text{
+    line-height: 10px;
+    margin: 0 10px;
+    width: 500px;
+}
