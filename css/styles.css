@@ -4,8 +4,10 @@
     font-family: 'Roboto';
 }
 .top-bar{
+    
+    color: white;
     position: relative;
-    background-color: blue;
+    background-color: rgb(116, 150, 255);
     width: 700px;
     height: 100px;
     margin: 50px auto;
@@ -13,6 +15,14 @@
     border-radius: 15px 50px;
     z-index: 1001;
 
+}
+.title, .description{
+    line-height: 5px;
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    
 }
 h1{
     float: left;
@@ -35,19 +45,20 @@ h1{
 }
 
 .content{
+    box-shadow: 4px 2px 1px 1px rgba(0,0,0, 0.2);
     z-index: 0;
     position: relative;
-    /* padding: 5px; */
+    flex-direction: row;
     width: 700px;
     height: 70vh;
     margin: -70px auto;
     border: 1px solid rgba(0,0,0, 0.5);
-    border-radius: 20px;
+    border-radius: 15px 50px;
 }
 .task{
     padding: 0 10px;
     clear: both;
-    height: 80px;
+    height: 85px;
     position: relative;
     border: 2px solid rgba(0,0,0,0.5);
     border-top: 0;
@@ -73,12 +84,20 @@ input{
     border-radius: 5px;
 
 }
-input[type='submit']{
-    width: 60px;
+button{
+    padding: 5px;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(116, 150, 255);
     
 }
 .text{
     line-height: 10px;
-    margin: 0 10px;
+    margin: 0 5px;
     width: 500px;
+}
+.empty{
+    font-size: 20px;
+    text-align: center;
 }

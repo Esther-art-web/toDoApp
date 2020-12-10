@@ -17,34 +17,37 @@
             </div>
             <div class="content">
                 <div class="item-list">
-                    <div class="task">
-                        <img src="./images/pending-icon.jpg" alt="pending" class="task-content icon">
+                    <!-- Pending\Task -->
+                    <!-- <div class="task">
+                        <img src="./images/pending-icon.jpg" alt="pending" id='pending' class="task-content icon">
                         <div class="task-content text">
-                            <p class="title">Task Title</p>
-                            <p class="description">Task Description</p>
+                            <p id='title' class="title">Task Title</p>
+                            <p id='description' class="description">Task Description</p>
                         </div>
-                        <img src="./images/check-icon.png" alt='...' class="task-content icon">
-                        <img src="./images/delete-icon.png" alt="..." class="task-content icon">
-                    </div>
-                    <div class="task">
-                        <img src="./images/done-icon.png" alt="..." class="task-content icon">
+                        <img src="./images/check-icon.png" alt='...' id='check' class="task-content icon">
+                        <img src="./images/delete-icon.png" alt="..." id="delete" class="task-content icon">
+                    </div> -->
+                    <!-- Done Task -->
+                    <!-- <div class="task">
+                        <img src="./images/done-icon.png" alt="..." id="done" class="task-content icon">
                         <div class="task-content text">
-                            <p class="title">Task Title</p>
-                            <p class="description">Task Description</p>
+                            <p id='title' class="title">Task Title</p>
+                            <p id="description" class="description">Task Description</p>
                         </div>
                         
-                        <img src="./images/delete-icon.png" alt="delete" class="task-content icon">
-                    </div>
+                        <img src="./images/delete-icon.png" alt="..." id="delete" class="task-content icon">
+                    </div> -->
                     
                 </div>
                 <form>
                     <img  class='add icon' src="./images/add-icon.svg" alt="..."/>
-                    <input type="text" placeholder="Task Title" minlength="2"/>
-                    <input type="text" placeholder="Task Description" minlength="6"/>
-                    <input type="submit" value="Add"/>
+                    <input type="text" id="taskTitle" placeholder="Task Title" minlength="2"/>
+                    <input type="text" id="taskDescription" placeholder="Task Description" minlength="6"/>
+                    <button  id="addTask" value= "Add"> Add </button>
                 </form>
             </div>
         </main>
     </div>
+    <script src= "./js/script.js" ></script>
 </body>
 </html>
