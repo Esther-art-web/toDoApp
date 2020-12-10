@@ -8,8 +8,8 @@
     color: white;
     position: relative;
     background-color: rgb(116, 150, 255);
-    width: 700px;
-    height: 100px;
+    width: 60vw;
+    height: 12vh;
     margin: 50px auto;
     padding: 10px;
     border-radius: 15px 50px;
@@ -26,13 +26,14 @@
 }
 h1{
     float: left;
-    margin: 20px 230px;
+    margin: 0 30%;
+   
    
 }
 .icon{
     float: left;
     background-color: white;
-    margin-top: 10px;
+    margin-top: 0;
     width: 50px;
     padding: 5px;
     border-radius: 50%;
@@ -49,8 +50,7 @@ h1{
     z-index: 0;
     position: relative;
     flex-direction: row;
-    width: 700px;
-    height: 70vh;
+    width: 60vw;
     margin: -70px auto;
     border: 1px solid rgba(0,0,0, 0.5);
     border-radius: 15px 50px;
@@ -78,15 +78,16 @@ form{
     border-top: 1px solid rgba(0,0,0,0.5);
 }
 input{
+    width: 30%;
     height: 30px;
-    margin: 20px 10px;
+    margin: 2% 1%;
     padding: 5px;
     border-radius: 5px;
 
 }
 button{
     padding: 5px;
-    width: 80px;
+    width: 10%;
     border-radius: 5px;
     color: white;
     background-color: rgb(116, 150, 255);
@@ -100,4 +101,23 @@ button{
 .empty{
     font-size: 20px;
     text-align: center;
+}
+/* @media only screen and (min-width: 600px) and (max-width: 1024px){
+    h1{
+        margin: 15px 140px;
+    }
+    .top-bar,.content{
+        width: 550px
+    }
+} */
+@media only screen and (min-width:200px) and (max-width: 599px){
+    h1{
+        margin: 5px 40px;
+    }
+    .top-bar,.content{
+        width: 300px;
+
+       
+    }
+    
 }
