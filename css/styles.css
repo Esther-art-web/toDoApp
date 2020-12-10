@@ -102,22 +102,13 @@ button{
     font-size: 20px;
     text-align: center;
 }
-/* @media only screen and (min-width: 600px) and (max-width: 1024px){
-    h1{
-        margin: 15px 140px;
-    }
-    .top-bar,.content{
-        width: 550px
-    }
-} */
+
 @media only screen and (min-width:200px) and (max-width: 599px){
     h1{
         margin: 5px 40px;
     }
     .top-bar,.content{
-        width: 300px;
-
-       
+        width: 300px;  
     }
     
 }
