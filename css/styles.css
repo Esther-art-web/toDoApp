@@ -1,128 +1,166 @@
 *{
-    box-sizing: border-box;
+    box-sizing: content-box;
     padding: 0;
+    margin: 0;
     font-family: 'Roboto';
 }
+.screen{
+    width: 100%;
+    min-width: 500px;
+    height: 100%;
+}
+ .container{
+    width: calc(100% - 10em);
+    min-width: calc(350px);
+    height: calc(100%) ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding:.1em 5em;
+} 
+
 .top-bar{
-    
     color: white;
     position: relative;
+    display: flex;
+    flex-direction: row;
     background-color: rgb(116, 150, 255);
-    width: 600px;
+    box-shadow: 4px 10px 10px 2px rgba(0,0,0, 0.1);
+    max-width:calc(600px - 4rem);
+    min-width:calc(300px - 4rem);
+    width: calc(100% - 4rem);
+    max-height: 85px;
+    min-height: 50px;
     height: 80px;
     margin: 50px auto;
-    padding:5px 20px;
-    border-radius: 15px 50px;
+    padding:5px 1rem;
+    border-radius:10px 10px 0 0;
     z-index: 1001;
 
 }
-.title, .description{
-    line-height: 5px;
-}
-.title{
-    font-size: 1.5rem;
-    font-weight: bolder;
-    
-}
-h1{
-    float: left;
-    margin: 1% 30%;
-   
-   
-}
-.icon{
-    float: left;
-    background-color: white;
-    margin-top: 2%;
-    width: 50px;
-    padding: 5px;
+.top-bar > img{
+    margin-top: 1em;
+    width: calc(40px - 0.5em);
+    height: calc(40px - 0.5em);
     border-radius: 50%;
 }
+.top-bar > h1{
+    font-size: calc(1.5em);
+    flex: 5;
+    text-align: center;
+    margin: 12px calc(10%);
+    
+}
+.add{
+    background-color: white;
+    margin-top: 2%;
+    width: calc(40px - 0.5em);
+    height: calc(40px - 0.5em);
+    cursor: pointer;
+    transition: all 200ms;
+    border-radius: 50%;
+}
+#addTask[disabled = 'disabled']{
+    cursor: not-allowed;
+}
 .item-list{
-    height: 50vh;
-    padding: 0px 0px 0px;
+    width: calc(100% );
+    height: 300px;
     overflow-y: auto;
-   
+   display: flex;
+   flex-direction: column;
 }
 
 .content{
+
     box-shadow: 4px 2px 1px 1px rgba(0,0,0, 0.2);
     z-index: 0;
     position: relative;
-    flex-direction: row;
-    width: 600px;
+    width: calc(100%);
+    max-width: 600px;
+    min-width: 300px;
     margin: -70px auto;
     border: 1px solid rgba(0,0,0, 0.5);
-    border-radius: 15px 50px;
+    border-radius: 10px 10px 0 0;
 }
 .task{
-    padding: 0 10px;
-    clear: both;
-    width: 100%;
-    height: 85px;
+    display: flex;
+    padding: .2em 1.5rem 1em 1.5rem;
+    width: calc(100% - 3rem);
+    height: calc( 70px );
     position: relative;
-    border: 2px solid rgba(0,0,0,0.5);
+    border: 2px solid rgba(0,0,0,0.3);
     border-top: 0;
     border-left: 0;
     border-right: 0;
     
 }
+.task > img{
+    flex: .2;
+    margin: 1em 0;
+    width: calc(40px - 0.5rem);
+    height: calc(40px - 0.5rem);
+
+}
+#pending{
+    width: calc(50px - 0.5rem);
+    height: calc(50px - 0.5rem);
+}
 .item-list:nth-child(1){
-    border-top: 2px solid rgba(0,0,0,0.5);
-    margin: 50px 0px 0px;
+    border-top: 2px solid rgba(0,0,0,0.3);
+    margin: 3em 0px 0px;
 }
 .task-content{
-    float: left;
+    flex: 4;
+    margin: 1.5em 1em;
+    /* padding: 10px 0; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    
+}
+.task-content > h3{
+    flex: 2;
+    line-height: 5px;
+    font-size: larger;
+}
+.task-content > p{
+    margin: 1em 0;
+    flex: 1;
+    line-height: 5px;
+   
 }
 form{
+    display: flex;
     padding: 10px 15px;
     border-top: 1px solid rgba(0,0,0,0.5);
 }
 input{
+    flex: 3;
     width: 30%;
+    min-width: 60px;
     height: 30px;
     margin: 2% 1%;
-    padding: 5px;
+    padding: .1em;
     border-radius: 5px;
+    font-size: calc(100% - .3rem );
 
 }
 button{
-    padding: 5px;
-    width: 10%;
+    padding: .1em;
+    margin: 2% 0;
+    width: calc(20%);
+    height: calc(2.2em);
     border-radius: 5px;
     color: white;
     background-color: rgb(116, 150, 255);
     
 }
-.text{
-    line-height: 10px;
-    margin: 0 0 0 5px;
-    width: 70%;
-}
+
 .empty{
-    font-size: 20px;
+    margin: 20px 0;
+    font-size: 1em;
     text-align: center;
 }
-.add{
-    margin-top: 0;
-}
-/* @media only screen and (min-width:768px) and (max-width: 1024px){
-    h1{
-        margin: 5px 40px;
-    }
-    .top-bar,.content{
-        width: 300px;  
-    }
-    
-} */
 
-
-/* @media only screen and (min-width:200px) and (max-width: 599px){
-    h1{
-        margin: 5px 40px;
-    }
-    .top-bar,.content{
-        width: 300px;  
-    }
-    
-} */

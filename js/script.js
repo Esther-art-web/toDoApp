@@ -19,6 +19,9 @@
 
             this.add= document.getElementsByClassName('add')[0];
             this.add.addEventListener('click', this.createTask);
+
+            this.export= document.getElementsByClassName('export')[0];
+            this.export.addEventListener('click', this.exportData)
            
             this.displayList();
         }
@@ -32,6 +35,7 @@
         validateForm=()=>{
             if (this.taskTitle.value.length < 2 || this.taskDescription.value.length < 6){
                 this.addTask.setAttribute('disabled', 'disabled');
+               
             }
             else{
                 this.addTask.removeAttribute('disabled');
@@ -58,14 +62,14 @@
             var taskContent= document.createElement('div');
             taskContent.setAttribute('class', 'task-content text');
 
-            var title= document.createElement('p');
+            var title= document.createElement('h3');
             title.setAttribute('id', 'title');
-            title.setAttribute('class', 'title');
+            // title.setAttribute('class', 'title');
             title.innerHTML= arr[index].title;
 
             var description= document.createElement('p');
             description.setAttribute('id', 'description');
-            description.setAttribute('class', 'description');
+            // description.setAttribute('class', 'description');
             description.innerHTML= arr[index].description;
 
             var deleteTask = document.createElement('img');
@@ -138,6 +142,25 @@
             this.localData.forEach(this.handleAddTask):
             this.itemList.appendChild(this.emptyMssg);
            
+        }
+        exportData=()=>{
+            if (this.localData.length > 0) {
+                const data = JSON.stringify(this.localData, null, 4);
+                const blob = new Blob([data], {type: "application/json"});
+                const url = webkitURL || URL;
+                const downloadLink = url.createObjectURL(blob);
+                const downloadButton = document.createElement('a');
+
+                downloadButton.setAttribute("download", `MyToDo-Data-Export-${Date.now()}.json`);
+                downloadButton.setAttribute("href", downloadLink);
+                downloadButton.style.display = "none";
+                document.body.appendChild(downloadButton);
+                downloadButton.click();
+                url.revokeObjectURL(downloadLink);
+
+            } else {
+                alert("Empty List: There's No Data To Export.");
+            }
         }
     }
     new ToDoApp();
